@@ -5,3 +5,5 @@ apiRouter.use("/users", usersRouter);
 
 const storiesRouter = require("./stories");
 apiRouter.use("/stories", storiesRouter);
+
+module.exports = apiRouter;

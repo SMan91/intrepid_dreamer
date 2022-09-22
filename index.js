@@ -3,7 +3,7 @@ const server = express();
 const cookieParser = require("cookie-parser");
 require("dotenv").config();
 const { COOKIE_SECRET } = process.env;
-const { authRequired } = require(".backend/api/utils");
+const { authRequired } = require("./backend/api/utils");
 
 // enable cross-origin resource sharing to proxy api requests
 // from localhost:3000 to localhost:4000 in local dev env
@@ -25,7 +25,7 @@ const path = require("path");
 server.use(express.static(path.join(__dirname, "build")));
 
 // here's our API
-server.use("/api", require("./api"));
+server.use("/api", require("./backend/api"));
 
 // by default serve up the react app if we don't recognize the route
 server.use((req, res, next) => {
@@ -37,7 +37,7 @@ server.get("/test", authRequired, (req, res, next) => {
 });
 
 // bring in the DB connection
-const { prisma } = require("./db");
+const { prisma } = require("./backend/db");
 
 // connect to the server
 const PORT = process.env.PORT || 4000;
