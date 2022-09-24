@@ -6,6 +6,7 @@ import {
   Login,
   NavBar,
   Register,
+  Stories,
   SingleStory,
 } from "./components";
 
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/Story/:id" element={<SingleStory />} />
+        <Route path="/Stories" element={<Stories />} />
       </Routes>
     </div>
   );

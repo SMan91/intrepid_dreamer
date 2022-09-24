@@ -5,3 +5,4 @@ export { default as NavBar } from "./NavBar";
 export { default as Register } from "./Register";
 export { default as SingleStory } from "./SingleStory";
 export { default as StoryCard } from "./StoryCard";
+export { default as Stories } from "./Stories";
