@@ -6,3 +6,5 @@ export { default as Register } from "./Register";
 export { default as SingleStory } from "./SingleStory";
 export { default as StoryCard } from "./StoryCard";
 export { default as Stories } from "./Stories";
+export { default as UserCard } from "./UserCard";
+export { default as Footer } from "./Footer";

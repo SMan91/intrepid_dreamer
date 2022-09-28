@@ -71,6 +71,7 @@ storiesRouter.patch("/:id", async (req, res, next) => {
   }
 });
 
+//Delete Story
 storiesRouter.delete("/:id", async (req, res, next) => {
   try {
     const storyId = +req.params.id;

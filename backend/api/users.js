@@ -1,8 +1,13 @@
 const usersRouter = require("express").Router();
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const { JWT_SECRET } = process.env;
 const prisma = require("../db/prisma");
 const { authRequired } = require("./utils");
 
-usersRouter.get("/all_users", authRequired, async (req, res, next) => {
+const SALT_ROUNDS = 10;
+
+usersRouter.get("/all_users", async (req, res, next) => {
   try {
     const users = await prisma.users.findMany();
     res.send(users);
@@ -49,7 +54,7 @@ usersRouter.post("/register", async (req, res, next) => {
       signed: true,
     });
 
-    res.send(user);
+    res.send({ user });
   } catch (error) {
     next(error);
   }
@@ -84,7 +89,7 @@ usersRouter.post("/login", async (req, res, next) => {
 
       delete user.password;
 
-      res.send(user);
+      res.send({ user });
     }
   } catch (error) {
     next(error);

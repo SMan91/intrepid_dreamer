@@ -5,6 +5,7 @@ import {
   Home,
   Login,
   NavBar,
+  Footer,
   Register,
   Stories,
   SingleStory,
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/Story/:id" element={<SingleStory />} />
         <Route path="/Stories" element={<Stories />} />
       </Routes>
+      <Footer />
     </div>
   );
 };
