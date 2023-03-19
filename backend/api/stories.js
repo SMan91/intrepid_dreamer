@@ -43,9 +43,10 @@ storiesRouter.get("/:title", async (req, res, next) => {
 //create story
 storiesRouter.post("/", async (req, res, next) => {
   try {
-    const { title, description, story_text } = req.body;
+    console.log("Creating story in backend API. This is req.body:", req.body);
+    const { title, description, story_text, img_url } = req.body;
     const createdStory = await prisma.stories.create({
-      data: { title, description, story_text },
+      data: { title, description, story_text, img_url },
     });
     res.send(createdStory);
   } catch (error) {
@@ -57,12 +58,12 @@ storiesRouter.post("/", async (req, res, next) => {
 storiesRouter.patch("/:id", async (req, res, next) => {
   try {
     const storyId = +req.params.id;
-    const { title, description, story_text } = req.body;
+    const { title, description, story_text, img_url } = req.body;
     const updatedStory = await prisma.stories.update({
       where: {
         id: storyId,
       },
-      data: { title, description, story_text },
+      data: { title, description, story_text, img_url },
     });
 
     res.send(updatedStory);

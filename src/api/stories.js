@@ -15,7 +15,12 @@ export const fetchStoryById = async (id) => {
   return result;
 };
 
-export const createStory = async ({ title, description, story_text }) => {
+export const createStory = async ({
+  title,
+  description,
+  story_text,
+  img_url,
+}) => {
   const response = await fetch(`api/stories/`, {
     method: "POST",
     headers: {
@@ -25,6 +30,7 @@ export const createStory = async ({ title, description, story_text }) => {
       title,
       description,
       story_text,
+      img_url,
     }),
   });
   const result = await response.json();
@@ -46,6 +52,7 @@ export const updateStory = async ({
       title,
       description,
       story_text,
+      img_url,
     }),
   });
   const result = await response.json();

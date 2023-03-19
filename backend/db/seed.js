@@ -15,7 +15,8 @@ const createTables = async () => {
     id SERIAL PRIMARY KEY,
     title VARCHAR (255) NOT NULL,
     description VARCHAR (255) NOT NULL,
-    story_text VARCHAR (100000) NOT NULL
+    story_text VARCHAR (100000) NOT NULL,
+    img_url VARCHAR (255) NOT NULL
   )
 ;`;
 

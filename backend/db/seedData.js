@@ -12,12 +12,14 @@ const stories = [
     title: "Story 1",
     description: "Story 1",
     story_text: "This is story 1",
+    img_url: "https://imgur.com/kIikDZq",
   },
 
   {
     title: "Story 2",
     description: "Story 2",
     story_text: "This is story 2",
+    img_url: "https://imgur.com/uBh2eJJ",
   },
 ];
 

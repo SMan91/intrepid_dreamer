@@ -23,4 +23,5 @@ model stories {
   title       String  @db.VarChar(255)
   description String  @db.VarChar(255)
   story_text  String  @db.VarChar(100000)
+  img_url     String  @db.VarChar(255)
 }

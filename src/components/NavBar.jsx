@@ -5,14 +5,14 @@ import useUser from "../hooks/useUsers";
 import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
-  const { user, setUser } = useUser();
+  // const { user, setUser } = useUser();
   const navigate = useNavigate();
   return (
     <div>
       <nav>
         <Link to="/">Home </Link>
-        <Link to="/Stories">Stories </Link>
-        {user.loggedIn ? (
+        {/* <Link to="/Stories">Stories </Link> */}
+        {/* {user.loggedIn ? (
           <button
             onClick={async () => {
               const result = await logoutUser();
@@ -25,7 +25,7 @@ const NavBar = () => {
           </button>
         ) : (
           <Link to="/Login">Login</Link>
-        )}
+        )} */}
       </nav>
     </div>
   );

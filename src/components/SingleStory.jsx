@@ -17,6 +17,7 @@ const SingleStory = () => {
   return (
     <div>
       <h1>{story.title} </h1>
+      <p>By Autumn Corbeau</p>
       <p>{story.story_text}</p>
     </div>
   );
