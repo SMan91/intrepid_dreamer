@@ -12,7 +12,8 @@ const stories = [
     title: "Story 1",
     description: "Story 1",
     story_text: "This is story 1",
-    img_url: "https://imgur.com/kIikDZq",
+    img_url:
+      "https://www.akcpetinsurance.com/res/akc/blog/2022/three-common-puppy-illnesses/akc-pupill-hdr-new-new.jpg",
   },
 
   {
